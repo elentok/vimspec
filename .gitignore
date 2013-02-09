@@ -1,0 +1,4 @@
+node_modules/*
+vimspec.output
+vimspec.errors
+tags

@@ -1,0 +1,47 @@
+{
+  "name": "vimspec",
+  "description": "runs vim specs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/elentok/vimspec",
+  "author": {
+    "name": "David Elentok",
+    "email": "3david@gmail.com",
+    "url": "http://www.elentok.com"
+  },
+  "bin": {
+    "tailr": "./bin/tailr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elentok/vimspec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elentok/vimspec/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/elentok/vimspec/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/vimspec.coffee",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script --reporter spec"
+  },
+  "dependencies": {
+    "exec-sync": "0.1.x",
+    "nomnom": "1.5.x",
+    "cli-color": "0.2.x",
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "coffee-script": "1.4.x",
+    "mocha": "1.8.x",
+    "chai": "1.5.x",
+    "sinon": "1.5.x",
+    "sinon-chai": "2.3.x"
+  }
+}
