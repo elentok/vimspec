@@ -1,6 +1,8 @@
 VimSpec
 =======
 
+[![Build Status](https://travis-ci.org/elentok/vimspec.png?branch=master)](https://travis-ci.org/elentok/vimspec)
+
 Vim spec/test framework.
 
 Currently, the only supported assertion is "AssertEquals"
