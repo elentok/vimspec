@@ -9,7 +9,7 @@
     "url": "http://www.elentok.com"
   },
   "bin": {
-    "tailr": "./bin/tailr"
+    "vimspec": "./bin/vimspec"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "exec-sync": "0.1.x",
-    "nomnom": "1.5.x",
     "cli-color": "0.2.x",
     "lodash": "*"
   },
