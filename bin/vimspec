@@ -1,0 +1,27 @@
+#!/usr/bin/env coffee
+
+clc = require 'cli-color'
+VimSpec = require '../lib/vimspec'
+
+path = 'test'
+if process.argv.length > 2
+  path = process.argv[2]
+
+spec = new VimSpec(path)
+results = spec.run()
+
+for file, output of results
+  console.log clc.blue.bold(file)
+  for line in output
+    if /^#/.test(line)
+      console.log "  " + line
+    else if /^✓/.test(line)
+      console.log clc.green("      " + line)
+    else if /^☓/.test(line)
+      console.log clc.red.bold("      " + line)
+    else
+      console.log "    " + line
+    
+  console.log "\n"
+  
+

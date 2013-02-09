@@ -9,10 +9,12 @@ describe "VimSpec", ->
       output = spec.run()
       expect(output).to.eql {
         "test/fixtures/file_spec.vim": [
+          "#TestAdd:",
           "Add(1,2)",
           "✓ equals 3"
+          "#TestSubtract:",
           "Subtract(1,2)",
-          "☓ '2' to equal '-1'"
+          "☓ expected '2' to equal '-1'"
         ]
       }
       

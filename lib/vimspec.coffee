@@ -28,6 +28,8 @@ module.exports = class VimSpec
       errors = fs.readFileSync('vimspec.errors', 'utf-8')
       if /error/i.test(errors)
         output.push errors
+    fs.unlinkSync('vimspec.output') if fs.existsSync('vimspec.output')
+    fs.unlinkSync('vimspec.errors') if fs.existsSync('vimspec.errors')
     output
 
     

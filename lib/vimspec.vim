@@ -9,6 +9,7 @@ function! Test(fullpath, functions)
   call StartTest()
   exec "source " . a:fullpath
   for funcName in a:functions
+    call s:Log("#" . funcName . ":")
     exec "call " . funcName . "()"
   endfor
   call EndTest()
@@ -32,6 +33,6 @@ function! AssertEquals(value1, value2)
   if a:value1 == a:value2
     exec "normal o" . "✓ equals " . a:value1
   else
-    exec "normal o". "☓ '" . a:value1 . "' to equal '" . a:value2 . "'"
+    exec "normal o". "☓ expected '" . a:value1 . "' to equal '" . a:value2 . "'"
   end
 endfunc
