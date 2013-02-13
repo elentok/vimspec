@@ -18,7 +18,7 @@ for file, output of results
     else if /^✓/.test(line)
       console.log clc.green("      " + line)
     else if /^☓/.test(line)
-      console.log clc.red.bold("      " + line)
+      console.log clc.red("      " + line)
     else
       console.log "    " + line
     
