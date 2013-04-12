@@ -32,7 +32,7 @@
     "test": "mocha --compilers coffee:coffee-script --reporter spec"
   },
   "dependencies": {
-    "exec-sync": "0.1.x",
+    "execSync": "0.0.x",
     "cli-color": "0.2.x",
     "lodash": "*"
   },

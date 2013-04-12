@@ -15,6 +15,9 @@ describe "VimSpec", ->
           "#TestSubtract:",
           "Subtract(1,2)",
           "☓ expected '2' to equal '-1'"
+          "#TestJoin:",
+          "Join(1,2)",
+          "✓ equals [1,2]"
         ]
       }
       
@@ -22,7 +25,7 @@ describe "VimSpec", ->
     it "search for functions starting with 'Test'", ->
       spec = new VimSpec('test/fixtures')
       functions = spec.getTestFunctions('test/fixtures/file_spec.vim')
-      expect(functions).to.eql ['TestAdd', 'TestSubtract']
+      expect(functions).to.eql ['TestAdd', 'TestSubtract', 'TestJoin']
       
   describe "#getRuntimeFilePath", ->
     it "returns the fullpath to vimspec.vim", ->

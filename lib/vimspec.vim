@@ -30,9 +30,19 @@ function! EndTest()
 endfunc
 
 function! AssertEquals(value1, value2)
+  let value1 = Format(a:value1)
+  let value2 = Format(a:value2)
   if a:value1 == a:value2
-    exec "normal o" . "✓ equals " . a:value1
+    exec "normal o" . "✓ equals " . value1
   else
-    exec "normal o". "☓ expected '" . a:value1 . "' to equal '" . a:value2 . "'"
+    exec "normal o". "☓ expected '" . value1 . "' to equal '" . value2 . "'"
   end
+endfunc
+
+function! Format(value)
+  if type(a:value) == type([])
+    return "[" . join(a:value, ',') . "]"
+  else
+    return a:value
+  endif
 endfunc

@@ -9,3 +9,8 @@ function! TestSubtract()
   call Describe("Subtract(1,2)")
   call AssertEquals(Subtract(1,2), -1) 
 endfunc
+
+function! TestJoin()
+  call Describe("Join(1,2)")
+  call AssertEquals(Join(1,2), [1,2])
+endfunc

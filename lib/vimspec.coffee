@@ -1,4 +1,4 @@
-execSync = require 'exec-sync'
+execSync = require('execSync').stdout
 fs = require 'fs'
 path = require 'path'
 clc = require 'cli-color'

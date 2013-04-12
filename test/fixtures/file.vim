@@ -6,3 +6,7 @@ endfunc
 function! Subtract(x, y)
   return a:x * a:y
 endfunc
+
+function! Join(x, y)
+  return [a:x, a:y]
+endfunc
