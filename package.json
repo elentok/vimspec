@@ -1,7 +1,7 @@
 {
   "name": "vimspec",
   "description": "runs vim specs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/elentok/vimspec",
   "author": {
     "name": "David Elentok",
