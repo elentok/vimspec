@@ -10,6 +10,8 @@ if process.argv.length > 2
 spec = new VimSpec(path)
 results = spec.run()
 
+success = true
+
 for file, output of results
   console.log clc.blue.bold(file)
   for line in output
@@ -19,9 +21,10 @@ for file, output of results
       console.log clc.green("      " + line)
     else if /^☓/.test(line)
       console.log clc.red("      " + line)
+      success = false
     else
       console.log "    " + line
     
   console.log "\n"
   
-
+process.exit(1) unless success
