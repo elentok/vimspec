@@ -19,7 +19,7 @@ module.exports = class VimSpec
     functions = @getTestFunctions(fullpath)
     cmd = "vim -V0vimspec.errors -e '+source #{@getRuntimeFilePath()}' " +
       "'+call Test(\"#{fullpath}\", #{JSON.stringify(functions)})' " +
-      "+qall"
+      "+qall!"
     execSync cmd
     output = []
     if fs.existsSync('vimspec.output')

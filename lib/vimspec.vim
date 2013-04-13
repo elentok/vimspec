@@ -1,4 +1,5 @@
 function! StartTest()
+  set hidden
   new
   setlocal buftype=nofile
   setlocal noswapfile
@@ -32,10 +33,10 @@ endfunc
 function! AssertEquals(value1, value2)
   let value1 = Format(a:value1)
   let value2 = Format(a:value2)
-  if a:value1 == a:value2
-    exec "normal o" . "✓ equals " . value1
+  if (type(a:value1) == type(a:value2)) && (a:value1 == a:value2)
+    call s:Log("✓ equals " . value1)
   else
-    exec "normal o". "☓ expected '" . value1 . "' to equal '" . value2 . "'"
+    call s:Log("☓ expected '" . value1 . "' to equal '" . value2 . "'")
   end
 endfunc
 
